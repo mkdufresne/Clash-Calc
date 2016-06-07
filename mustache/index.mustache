@@ -1,0 +1,443 @@
+<!DOCTYPE HTML>
+<!--!
+    This work is licensed under a Creative Commons BY-NC-ND 4.0 International License
+    http://creativecommons.org/licenses/by-nc-nd/4.0/
+-->
+<html lang="en" data-version="{{firstChangelog.version}}">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui"/>
+
+    <title>{{clash_calc_seo}}</title>
+
+    <script src="/clash-of-clans/js/-head-blockers.js"></script>
+    <script src="/clash-of-clans/js/-all.js" data-main="yes"></script>
+    <script src="/clash-of-clans/js/preload-images.js"></script>
+
+    <link rel="stylesheet" type="text/less" href="/clash-of-clans/css/all.less"/>
+
+    <meta name="description" content="{{clash_calc_description}}"/>
+
+    <link rel="icon" href="/clash-of-clans/i/favicon-v2.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/clash-of-clans/i/app-icons/76x76.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/clash-of-clans/i/app-icons/120x120.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/clash-of-clans/i/app-icons/152x152.png"/>
+
+    <meta name="theme-color" content="#a2a"/>
+
+    <meta name="apple-mobile-web-app-title" content="{{clash_calc}}"/>
+
+    <meta name="twitter:site" content="@ClashCalc"/>
+    <meta name="twitter:creator" content="@Splurov"/>
+
+    <meta property="og:url" content="http://mkln.ru/clash-of-clans/"/>
+    <meta property="og:title" content="{{clash_calc_title}}"/>
+    <meta property="og:description" content="{{clash_calc_description}}"/>
+</head>
+<body class="index">
+
+<h1 id="top-anchor">
+    <span style="display: none;">{{clash_calc}} — </span>
+    {{clash_calc_base}}
+
+    <a href="https://twitter.com/ClashCalc"
+       target="_blank"
+       class="button button_after button_social"
+       title="Follow @ClashCalc on Twitter"><span class="icon-twitter"></span></a>
+
+    <a href="https://www.facebook.com/ClashCalc"
+       target="_blank"
+       class="button button_after button_social"
+       title="Like {{clash_calc}} on Facebook"><span class="icon-facebook"></span>
+    </a>
+</h1>
+
+<p>{{clash_calc_description}}</p>
+
+<p class="message message_negative message_important">
+    <strong>
+        Clash Calc is no longer supported.
+        This means that there will be no more updates and no support for new features of Clash of Clans.
+    </strong>
+</p>
+
+<!--[if lte IE 9]>
+<p class="message message_negative message_centered">
+    You are using an old version of Internet Explorer which is not supported.<br/>
+    Upgrade to a modern browser, such as <a href="http://getfirefox.com/" target="_blank">Firefox</a>.
+</p>
+<![endif]-->
+
+<div class="menu js-menu">
+    <span class="menu__item menu__item_logo js-anchor" data-for="top-anchor"></span>
+
+    <span class="menu__item menu__item_mobile js-menu-switcher"></span>
+    <span class="menu__items js-menu-items">
+        <span class="menu__item js-anchor js-light-object" data-for="light-anchor">Barracks</span>
+        <span class="menu__item js-anchor js-dark-object" data-for="dark-anchor">Dark Barracks</span>
+        <span class="menu__item js-anchor js-light-spells-object" data-for="light-spells-anchor">Spell Factory</span>
+        <span class="menu__item js-anchor js-dark-spells-object" data-for="dark-spells-anchor">Dark Spell Factory</span>
+        <span class="menu__item js-anchor js-share" data-for="share-anchor">Share</span>
+        <span class="menu__item js-anchor" data-for="favorites-anchor">Saved</span>
+        <span class="menu__item js-favorite-add"><span class="icon-favorite">Save Composition</span></span>
+    </span>
+</div>
+
+<p id="view-shared"
+   class="message message_closeable message_root message_centered"
+   title="Click to hide"
+   style="display: none;">
+    You are viewing shared army composition (you can find previous one in the saved compositions)
+</p>
+
+<p id="storage-quota-exceeded" class="message message_negative message_root" style="display: none;">
+</p>
+
+<div class="settings">
+<!--<h2 id="settings-anchor">Settings</h2>-->
+<p class="small">
+    Set the Army Camps capacity, level of barracks, troops,
+    spell factories and spells based on the Town Hall of level:<br/>
+    <span class="button-group button-group_settings">
+        <span class="button js-settings-level">1</span><!--
+        --><span class="button js-settings-level">2</span><!--
+        --><span class="button js-settings-level">3</span><!--
+        --><span class="button js-settings-level">4</span><!--
+        --><span class="button js-settings-level">5</span><!--
+        --><span class="button js-settings-level">6</span><!--
+        --><span class="button js-settings-level">7</span><!--
+        --><span class="button js-settings-level">8</span><!--
+        --><span class="button js-settings-level">9</span><!--
+        --><span class="button js-settings-level">10</span><!--
+        --><span class="button js-settings-level">11</span>
+    </span>
+
+</p>
+<div class="data-wrapper">
+    <table class="data data_buildings">
+        <tfoot>
+            {{#types}}
+                <tr>
+                    <td>
+                        {{title}} Level{{^spells}}s{{/spells}}
+                    </td>
+                    <td class="small">
+                        {{#barracks}}
+                            <select id="{{type}}-level-{{index}}" class="js-comp-level" data-num="{{index}}">
+                                {{#options}}
+                                    <option value="{{text}}"{{#selected}} selected="selected"{{/selected}}>{{text}}</option>
+                                {{/options}}
+                            </select>
+                        {{/barracks}}
+                        {{#spells}}
+                            <select id="{{type}}-level" class="js-comp-level">
+                                {{#options}}
+                                    <option value="{{text}}"{{#selected}} selected="selected"{{/selected}}>{{text}}</option>
+                                {{/options}}
+                            </select>
+                        {{/spells}}
+                    </td>
+                </tr>
+            {{/types}}
+            <tr>
+                <td>
+                    Army Camps Troop Capacity
+                </td>
+                <td class="small">
+                    <select id="army-camps" class="js-comp-level">
+                        {{#armyCamps}}
+                            <option value="{{value}}"{{#selected}} selected="selected"{{/selected}}>{{value}}</option>
+                        {{/armyCamps}}
+                    </select>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+</div>
+
+{{#types}}
+    <div class="js-{{type}}-object">
+        <h2 id="{{type}}-anchor">
+            {{title}}
+            {{^spells}}
+                <span class="message message_negative message_after"
+                      style="display: none"
+                      id="{{type}}-exceeded">
+                    Exceeded training capacity of the {{title}}
+                    <span class="help-link js-help-link">
+                        <span class="help-link__content js-help-content">
+                            It’s impossible to distribute troops between the barracks when training capacity is exceeded.
+                            Please reduce the number of troops or try to train them in two stages.
+                        </span>
+                    </span>
+                </span>
+
+                <div class="button-group button-group_switcher">
+                    <span class="button js-cols-switcher" data-type="{{type}}" data-view="quantity">Quantity</span><!--
+                    --><span class="button js-cols-switcher" data-type="{{type}}" data-view="subtract">Subtract</span><!--
+                    --><span class="button js-cols-switcher" data-type="{{type}}" data-view="barrack">Distribution</span>
+                </div>
+            {{/spells}}
+            {{#spells}}
+                <label id="{{type}}-boosted-wrapper" class="after">
+                    <input type="checkbox" id="{{type}}-boosted" class="js-comp-boosted"/>
+                    Boost
+                </label>
+            {{/spells}}
+        </h2>
+        <div class="data-wrapper">
+            <table class="data">
+                <thead>
+                    <tr>
+                        <th><span class="data__object-title">{{objectTitle}}</span></th>
+                        <th class="js-col-{{type}}-level">Level</th>
+                        <th class="col-quantity js-col-{{type}}-quantity">
+                            <span class="tiny data__right">
+                                <span id="{{type}}-quantity" class="text-middle"></span>
+                                <span class="help-link js-help-link">
+                                    <span class="help-link__content js-help-content">
+                                        {{capacityText}}
+                                    </span>
+                                </span>
+                            </span>
+                            Quantity
+                            <br/>
+                            <span class="button button_reset js-reset" data-reset="{{type}}" data-scope="quantity">
+                                Reset
+                            </span>
+                        </th>
+                        <th class="col-total js-col-{{type}}-total">
+                            <span class="icon-{{currencyCode}}">Total</span>
+                        </th>
+                        {{^spells}}
+                            <th class="js-col-{{type}}-subtract">
+                                Subtract
+                                <span class="help-link js-help-link">
+                                    <span class="help-link__content js-help-content">
+                                        Allows to “subtract” troops, which you already have.
+                                        For example, you want to get
+                                        {{#light}}100 Barbarians and 100 Archers.{{/light}}
+                                        {{#dark}}20 Minions.{{/dark}}
+                                        And you already have
+                                        {{#light}}20 Barbarians.{{/light}}
+                                        {{#dark}}5 Minions.{{/dark}}
+                                        In the column “Quantity”, as usual, make
+                                        {{#light}}100 Barbarians and 100 Archers.{{/light}}
+                                        {{#dark}}20 Minions.{{/dark}}
+                                        And in the column “Subtract”
+                                        {{#light}}20 Barbarians.{{/light}}
+                                        {{#dark}}5 Minions.{{/dark}}
+                                        Now the distribution between the barracks are considered to be only for
+                                        {{#light}}80 Barbarians and 100 Archers.{{/light}}
+                                        {{#dark}}15 Minions.{{/dark}}
+                                        This is very useful, when after the battle you have remained part of the army.<br/>
+                                        (Values from the “Subtract” columns not preserved between browser sessions
+                                        nor stored in the saved compositions.)
+                                    </span>
+                                </span>
+                                <br/>
+                                <span class="button button_reset js-reset" data-reset="{{type}}" data-scope="subtract">
+                                    Reset
+                                </span>
+                            </th>
+
+                            {{#barracks}}
+                                <td class="js-col-{{type}}-barrack col-barrack{{#isFirst}}-first{{/isFirst}}">
+                                    <span id="{{type}}-barrack-info-{{index}}">
+                                        <span class="small">
+                                            <span id="{{type}}-levelText-{{index}}"></span>
+                                            lvl
+                                        </span>
+                                        <br/>
+                                        <label class="tiny field-checkbox">
+                                            <input type="checkbox"
+                                                   id="{{type}}-boosted-{{index}}"
+                                                   class="js-comp-boosted"/>
+                                            Boost
+                                        </label>
+                                        <br/>
+                                        <span class="tiny">
+                                            <span class="text-middle">
+                                                <span id="{{type}}-space-{{index}}"></span>
+                                                <span id="{{type}}-maxSpace-{{index}}"></span>
+                                            </span>
+                                            {{#isFirst}}
+                                                <span class="help-link js-help-link">
+                                                    <span class="help-link__content js-help-content">
+                                                        Training Capacity of the {{titleSingular}}
+                                                    </span>
+                                                </span>
+                                            {{/isFirst}}
+                                        </span>
+                                    </span>
+                                </td>
+                            {{/barracks}}
+                        {{/spells}}
+                    </tr>
+                </thead>
+                <tbody class="object-{{type}}">
+                    {{#objects}}
+                        {{> item_row}}
+                    {{/objects}}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td class="js-col-{{type}}-level"></td>
+                        <td class="result js-col-{{type}}-quantity">
+                            <span id="{{type}}-space" class="text-middle"></span>
+                            <span class="help-link js-help-link">
+                                <span class="help-link__content js-help-content">
+                                    {{#spells}}
+                                        Spell Capacity
+                                    {{/spells}}
+                                    {{^spells}}
+                                        Total Troop Capacity of the Army Camps
+                                    {{/spells}}
+                                </span>
+                            </span>
+                        </td>
+
+                        <td id="{{type}}-cost" class="number result js-col-{{type}}-total"></td>
+
+                        {{^spells}}
+                            <td id="{{type}}-subtracted-cost" class="tiny js-col-{{type}}-subtract"></td>
+                            {{#barracks}}
+                                <td id="{{type}}-time-{{index}}" class="number data__time js-col-{{type}}-barrack"></td>
+                            {{/barracks}}
+                        {{/spells}}
+                    </tr>
+                    {{#spells}}
+                        <tr>
+                            <td colspan="3" class="small number">
+                                Time:
+                            </td>
+                            <td class="result number" id="{{type}}-time"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="tiny number">
+                                Grand Total with {{opposite}}:
+                            </td>
+                            <td class="tiny result number" id="{{type}}-grand-total"></td>
+                        </tr>
+                    {{/spells}}
+                </tfoot>
+            </table>
+        </div>
+    </div>
+{{/types}}
+
+<div class="js-share">
+    <h2 id="share-anchor">Share Army Composition</h2>
+    <table class="share">
+        <tr>
+            <td class="share-left">
+                <a href=""
+                   target="_blank"
+                   class="button button_social js-share-link"
+                   data-share-link="https://twitter.com/share?url={url}&amp;via=ClashCalc&amp;hashtags=ClashOfClans"
+                   title="Share on Twitter">
+                    <span class="icon-twitter"></span>
+                </a>
+                <a href=""
+                   target="_blank"
+                   class="button button_social button_after js-share-link"
+                   data-share-link="https://www.facebook.com/sharer/sharer.php?u={url}"
+                   title="Share on Facebook">
+                    <span class="icon-facebook"></span>
+                </a>
+                <a href=""
+                   target="_blank"
+                   class="button button_social button_after js-share-link"
+                   data-share-link="https://plus.google.com/share?url={url}"
+                   title="Share on Google+">
+                    <span class="icon-gplus"></span>
+                </a>
+            </td>
+            <td class="share-right">
+                <input id="share-permalink" class="share-permalink"/>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<h2 id="favorites-anchor">
+    Saved Army Compositions
+
+    <span class="help-link js-help-link">
+        <span class="help-link__content js-help-content">
+            Formerly “Favorites”.<br/>
+            You can save your army compositions for future use or to compare them side by side.<br/>
+            “Boost” flags and values from the “Subtract” columns not stored.
+        </span>
+    </span>
+
+    <span class="js-favorite-add button button_after"><span class="icon-favorite">Save</span></span>
+</h2>
+<div id="favorites">
+</div>
+
+<div class="list-content">
+    {{#firstChangelog}}
+        <h2>
+            What’s New in {{clash_calc}}
+            <a href="version-history.html" class="button button_after" target="_blank">Version History</a>
+        </h2>
+        <h3>
+            Version {{version}}<br/>
+            <span class="list-content__date">{{date}}</span>
+        </h3>
+        {{#ch_title}}
+            <p>{{ch_title}}</p>
+        {{/ch_title}}
+        <ul>
+            {{#changes}}
+                <li>{{& change}}.</li>
+            {{/changes}}
+        </ul>
+    {{/firstChangelog}}
+    {{#secondChangelog}}
+        <h3>
+            {{version}}<br/>
+            <span class="list-content__date">{{date}}</span>
+        </h3>
+        {{#ch_title}}
+            <p>{{ch_title}}</p>
+        {{/ch_title}}
+        <ul>
+            {{#changes}}
+                <li>{{& change}}.</li>
+            {{/changes}}
+        </ul>
+    {{/secondChangelog}}
+</div>
+
+<footer>
+    <p>
+        Clash of Clans and its logos are trademarks of Supercell.
+        This web site is not affiliated with, endorsed, sponsored, or specifically approved by Supercell.
+        Supercell is not responsible for the operation or content of this site.
+        {{!Use the trademarks and other intellectual property of Supercell is only as expressly permitted as set forth in Supercell’s
+        <a href="http://forum.supercell.net/showthread.php/148005-Clash-of-Clans-Fan-Kit-and-Guidelines">Fan Site Kit Agreement</a>.}}
+        For more information about Supercell, please visit their website at
+        <a href="http://www.supercell.net/">www.supercell.net</a>.
+    </p>
+
+    {{!
+    <p>
+        If you find a bug please send an e-mail to <a href="mailto:clashcalc@mkln.ru">clashcalc@mkln.ru</a>.
+    </p>
+    }}
+
+    <p>
+        Developed by <a href="/en/">Mikhail Kalashnik</a><br/>
+        © 2014
+    </p>
+</footer>
+
+<script src="/js/-footer.js"></script>
+{{& ya_metrika_noscript}}
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Version History — {{clash_calc}}</title>
+    <link rel="stylesheet" type="text/less" href="/clash-of-clans/css/all.less"/>
+    <link rel="icon" href="/clash-of-clans/i/favicon-v2.png"/>
+</head>
+<body>
+
+<h1>
+    <a href="/clash-of-clans/" class="logo"></a><br/>
+    <span style="display: none;">{{clash_calc}} — </span>Version History
+</h1>
+
+<div class="list-content">
+    {{#changelog}}
+    <h3>
+        {{version}}<br/>
+        <span class="list-content__date">{{date}}</span>
+    </h3>
+    {{#ch_title}}
+    <p>{{ch_title}}</p>
+    {{/ch_title}}
+    <ul>
+        {{#changes}}
+        <li>{{& change}}.</li>
+        {{/changes}}
+    </ul>
+    {{/changelog}}
+</div>
+
+<script src="/js/-footer.js"></script>
+{{& ya_metrika_noscript}}
+
+</body>
+</html>

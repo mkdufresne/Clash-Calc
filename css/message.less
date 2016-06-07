@@ -1,0 +1,60 @@
+.message {
+    background: #d3ffd3;
+    border: 1px solid #7f7;
+    border-radius: 5px;
+    padding: 3px 7px;
+    font-weight: normal;
+
+    .font-size('small');
+
+    @media @mobile-media-query {
+        display: block;
+
+        margin-left: -@mobile-page-indent;
+        margin-right: -@mobile-page-indent;
+
+        margin-top: 5px;
+        margin-bottom: 10px;
+
+        padding-left: @mobile-page-indent;
+        padding-right: @mobile-page-indent;
+
+        border-left: 0;
+        border-right: 0;
+        border-radius: 0;
+    }
+}
+    .message_closeable {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .message_after {
+        margin-left: 10px;
+    }
+
+    .message_negative {
+        background: #ffe3e3;
+        border: 1px solid #f99;
+    }
+
+    .message_root {
+        margin-bottom: 15px;
+    }
+
+    .message_centered {
+        text-align: center;
+
+        @media @mobile-media-query {
+            text-align: left;
+        }
+    }
+
+    .message_important {
+        padding: 8px 12px;
+        .font-size('normal');
+        @media @not-mobile-media-query {
+            margin-left: -13px;
+            margin-right: -13px;
+        }
+    }

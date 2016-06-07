@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Version History — Clash Calc</title>
+<style>@-webkit-keyframes blink{0%{background:transparent}45%{background:#ffd}100%{background:transparent}}@keyframes blink{0%{background:transparent}45%{background:#ffd}100%{background:transparent}}body,html{background:#fefefe;color:#222}body{font-family:PT Sans,Trebuchet MS,Arial,sans-serif;font-size:16px;line-height:1.4;margin:0;padding:12px 20px 12px;-webkit-text-size-adjust:100%}body.index{padding-top:46px}a:link{color:#4100f1;text-decoration:none}a:visited{color:#63008c;text-decoration:none}a:active,a:hover{text-decoration:underline}kbd{background:#f0f0f0;border:1px solid #ddd;border-radius:5px;font-family:inherit;padding:0 4px}button,input,select,textarea{font-family:inherit;font-size:inherit}button::-moz-focus-inner{border:0;padding:0}input[type="checkbox"]{height:1em;margin:0;width:1em}label{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}h1{font-size:17px;margin:0 0 3px}h2{font-size:16px;margin:15px 0 8px}h3{font-size:14px;margin:15px 0 2px}p{margin:0 0 10px;max-width:50em}ol{margin:0 0 10px;max-width:50em;padding:0 0 0 21px}table{border-spacing:0}table td,table th{padding:0}.number{text-align:right}.logo{background-image:url(/clash-of-clans/i/logo.svg);background-position:50% 50%;background-repeat:no-repeat;background-size:90px 13px;display:inline-block;height:13px;width:90px}.small{font-size:14px}.tiny{font-size:13px}.limit-exceeded{color:#d00}.result{font-weight:bold}.text-middle{vertical-align:middle}.boosted{text-shadow:#48f928 1px 1px 3px}.after{margin-left:12px}.changed-animation{-webkit-animation-delay:200ms;animation-delay:200ms;-webkit-animation-duration:2s;animation-duration:2s;-webkit-animation-name:blink;animation-name:blink}.data{-webkit-font-smoothing:subpixel-antialiased;margin-bottom:20px;-webkit-transform:translateZ(0)}.data td,.data th{border-bottom:1px solid #ddd;border-right:1px solid #ddd;padding-bottom:2px;padding-left:7px;padding-right:7px;white-space:nowrap}.data th{font-size:14px;text-align:left;vertical-align:top}.data td{padding-top:2px}.data td>input{text-align:right;vertical-align:middle}.data td:first-child,.data th:first-child{padding-left:0}.data td:last-child,.data th:last-child{border-right:0}.data tfoot tr:last-child td{border-bottom:0}.data td.data__last,.data th.data__last{border-right:0;padding-right:10px}.s-touch .data{-webkit-user-select:none}.data_buildings{font-size:14px;margin-bottom:0}.data_buildings td,.data_buildings th{white-space:normal}.data_buildings select{margin-right:8px}.data__right{float:right;padding-top:1px}.col-total{min-width:65px}.list-content{margin-bottom:10px;max-width:50em}.list-content h2{margin-bottom:4px}.list-content h2+h3{margin-top:0}.list-content ul{list-style:none;margin:0;padding:0}.list-content li{padding-left:12px;position:relative}.list-content li:before{content:'•';left:0;position:absolute}.list-content p{margin:0 0 1px}.list-content__date{color:#777}.object-text{font-size:14px;margin-left:3px;vertical-align:middle}.object-icon{background-repeat:no-repeat;display:inline-block;height:32px;vertical-align:middle;width:32px}.object-light .object-icon{background-image:url(/clash-of-clans/i/objects-light.png);background-size:32px 365px}.__P-E-K-K-A-{background-position:0 -259px}.__Wall_Breaker{background-position:0 -296px}.__Wizard{background-position:0 -333px}.object-dark .object-icon{background-image:url(/clash-of-clans/i/objects-dark.png?140917);background-size:32px 254px}.__Goblin,.__Lava_Hound{background-position:0 -185px}.__Bowler,.__Healer{background-position:0 -222px}.object-light-spells .object-icon{background-image:url(/clash-of-clans/i/objects-light-spells.png);background-size:32px 180px}.__Dragon,.__Lightning,.__Valkyrie{background-position:0 -111px}.__Giant,.__Rage,.__Witch{background-position:0 -148px}.object-dark-spells .object-icon{background-image:url(/clash-of-clans/i/objects-dark-spells.png);background-size:32px 106px}.__Archer,.__Freeze,.__Golem,.__Poison{background-position:0 0}.__Balloon,.__Earthquake,.__Healing,.__Hog_Rider{background-position:0 -37px}.__Barbarian,.__Haste,.__Jump,.__Minion{background-position:0 -74px}.icon-twitter{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNzMuNiAyNzMuNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjczLjYgMjczLjYiPjxwYXRoIGZpbGw9IiM1RkE5REQiIGQ9Ik0yNzMuNSA1MmMtMTAuMSA0LjUtMjAuOSA3LjUtMzIuMiA4LjggMTEuNi02LjkgMjAuNS0xNy45IDI0LjctMzEtMTAuOCA2LjQtMjIuOCAxMS4xLTM1LjYgMTMuNi0xMC4yLTEwLjktMjQuOC0xNy43LTQwLjktMTcuNy0zMSAwLTU2LjEgMjUuMS01Ni4xIDU2LjEgMCA0LjQuNSA4LjcgMS41IDEyLjgtNDYuOC0yLjQtODguMS0yNC43LTExNS44LTU4LjYtNC44IDguMy03LjYgMTcuOS03LjYgMjguMiAwIDE5LjUgOS45IDM2LjYgMjUgNDYuNy05LjItLjMtMTcuOC0yLjgtMjUuNC03di43YzAgMjcuMiAxOS4zIDQ5LjggNDUgNTUtNC43IDEuMy05LjcgMi0xNC44IDItMy42IDAtNy4xLS40LTEwLjYtMSA3LjEgMjIuMyAyNy45IDM4LjUgNTIuNCAzOS0xOS4yIDE1LTQzLjQgMjQtNjkuNyAyNC00LjUgMC05LS4zLTEzLjQtLjggMjQuOCAxNS45IDU0LjMgMjUuMiA4NiAyNS4yIDEwMy4yIDAgMTU5LjYtODUuNSAxNTkuNi0xNTkuNiAwLTIuNC0uMS00LjktLjItNy4zIDExLjEtOCAyMC42LTE3LjggMjguMS0yOS4xeiIvPjwvc3ZnPg==);background-position:0 50%;background-repeat:no-repeat;background-size:16px 16px;padding-left:16px}.icon-facebook{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNjYuOSAyNjYuOSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjY2LjkgMjY2LjkiPjxwYXRoIGZpbGw9IiMzQjU5OTgiIGQ9Ik0yNTIuMiAyNjYuOWM4LjEgMCAxNC43LTYuNiAxNC43LTE0Ljd2LTIzNy41YzAtOC4xLTYuNi0xNC43LTE0LjctMTQuN2gtMjM3LjVjLTguMSAwLTE0LjcgNi42LTE0LjcgMTQuN3YyMzcuNGMwIDguMSA2LjYgMTQuNyAxNC43IDE0LjdoMjM3LjV6Ii8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE4NC4yIDI2Ni45di0xMDMuNGgzNC43bDUuMi00MC4zaC0zOS45di0yNS43YzAtMTEuNyAzLjItMTkuNiAyMC0xOS42aDIxLjN2LTM2Yy0zLjctLjUtMTYuNC0xLjYtMzEuMS0xLjYtMzAuOCAwLTUxLjggMTguOC01MS44IDUzLjJ2MjkuN2gtMzQuOHY0MC4zaDM0Ljh2MTAzLjRoNDEuNnoiLz48L3N2Zz4=);background-position:0 50%;background-repeat:no-repeat;background-size:16px 16px;padding-left:16px}.icon-gplus{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADfElEQVR4AdWS7W9TZRiHn39k8ZMmOMo6YNSNvdius2UjDgwlojE6zYwJCtkYAVNGQT8MqC+JI2oUjcaIiYIf1A++QiSgYmRt6Wm37pz1ldaug25jXbu+/jx3wknEntPm+bLGK7m2Pvd9P899n3MeFn7aejhkM+Vksa7u7c2En7IcYcHBzuzcgAGNMPh4R45J/dvQSP8/A3gtW3Hd3IprJj2uGPX41dhyn1flONVwDyDuaEMtZ6xb8ccOAyTnCaz8eQ3FVBKVYhH/pZBMIHHyEO3hsf4Arud2IRuLIBvwITYyBGmwE3H7yyjM/w2isHgHvpHn5fh2queWzVrboKXQ/whWI0EQoaHd9+XCwzaU83kQy34vfBaK88sC8ivWUnKMgigsLarmb3/zJRRmx16kGLcsIF8cLRNffAwin76DGZV8eGwYCrF3TlGMWzbz2BZoOX/xPBQEm7kqP/uEEQq3To9TjNfaA8SdDigEzzqr8r7BbhCl1QzEPaaq/KUuXf0Bpvs2Q8uZne1Yi0fv3fY0pvaY4b+XE8ytCEyMA+Uy4hN21f0E/a8l8/e1opaSfPtz4TkQ2XgMvpOHMTW8F8GPzqKUWUHMMVq15+euZpCE8lvrfOaXn6Se0/JlidoPIPXJe/LN/woKsXffUK1XQfNs5uvVg0fp6H4ohM5NwmvSriXqnccE+Q+PgSetKOfXQFTKJQTlIdwatUS985jX1IJ6/mXcBNezu+B/7QioYSYo4t/MX/4R7r4tVMst8xpboKWrdzPEyTPIJRPITAtIyBcvcuwg5vY/g/D4CPK3U1BIfHuR9nDLbspPp6ZnoB1LXhdQqSDqdKjW+Hf34K7gBkF1gvyWKM4j8zy6CWreunAexMKl72mtqbe/nd4QCGniGMV4pAF0UDO/mAYRPTdJ65rGPvsQhGg/QGsumbtnI9QsrtwFsXDlF1rXNH7hcxSWl+CxtNGaS+bu3gg1k999rXxbiKeOQ6vu5r4Bag7x+CituWWu7mao6dnZgWXBDYX0jesQz5yA8NI+CC/Y4D84hMin72M1EsLsq68o+7hlU13N0NLVo4P4+lEsXL2MXCqJcqGA0lqOLh19GkinHXBbtin14FcZoIGyG50Po5E2foDft2+oNKr5bx0bKuwD/QOpHwwP4ifDQ+sq9aTe7G1d09hbuqbsm7omrKfUU+596B9/mstg+ahRZwAAAABJRU5ErkJggg==);background-position:0 50%;background-repeat:no-repeat;background-size:16px 16px;padding-left:16px}.icon-favorite{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0iIzk5MCIgZD0iTTI1NiA2MC4wODJsNjIuOTc5IDEyOS45MiAxNDMuMDIyIDE5Ljc0OC0xMDQuMTAxIDEwMC4wNDMgMjUuNDE1IDE0Mi4xMjUtMTI3LjMxNS02OC4wOS0xMjcuMzE1IDY4LjA5IDI1LjQxNS0xNDIuMTI1LTEwNC4xMDEtMTAwLjA0MyAxNDMuMDIyLTE5Ljc0OHoiLz48L3N2Zz4=);background-position:-1px 0;background-repeat:no-repeat;background-size:1.15em 1.15em;padding-left:1.2em}.icon-elixir{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAgCAMAAAA2a+hwAAAAwFBMVEUAAABNKUSVHXqmIY07GDQ/ETOHGXIAAgDILK8JBggzEihTEkdoG1h3OmndS7+wNpm4JJWTTX/BXqbCJ5//O+H/OtvhM8XTL73/Nsj/O+j/Odf/T9vuNcz2PdT6NMH/PvC6K7TsNtfFLbz/SNzqMLf/XeHdL7f/VtzrNMX/Qdj4NszfM9L/U9z/OM/tP877S9XOMcrULbL/OdT/c+byTNP/PvbzON6tKK3/kfH/UeL/ReP/rvb/9///2P/hYcDuW9Ekyq1uAAAAFHRSTlMAa7rPTzyWDvwbK395pPnf5sfz7DyZ/IkAAAHVSURBVHhebdPVeqtQEAXgBA/xdgvuTtylPef936ozO3yprovc/KwZCJveH9EHpmr+CcpQkmdGMVN+0aAvvWbNjhC76P9s9eXCWu4glGbD76ZKWwuC6lBP+1YbzQJhD3Qk/cs2zUB4kONQMjU/TaosixJCKAD+EEN5rpOrpUPsMAxtm4hLyGrYmSmzBhcBH0NUSu1wrHcziyKAbU+E2Mduqca3GSCF6+2wQ3LkfTTFEAhjqSjdHlV/jENlZhRVs6tTgnrbXy654DksHTFuMG/p5PucUrD7+/tFVKeDni6fEl75uxowTW/X/f3t7X5DnJiwMY4A/Z1buql7vXZN27YnSm/YthFnXgPd1C3Lay524l0f+r3hqY0SVnm+v07dRVmWeX4liKRDgzNEYQs3JeKJ6X+BCc5dIS7KhUCM8w+wjTdRgnhAdd0UAV5c/aLA3Z42kageQMFqJHixizk8pwRzzwljK9R1XT/IsmAq/rUw95xwZN/vxArWcx1Q1+J2cxZaeV7TCAqWL2r3qk+oEUeuAkwWTEbPQwLd6Hw2OC9YhrEm3TnArsTiTQJlYwspsmYyHnw9tK8xtJMk4dyjq6ny47hrsy2LIR6fjtXfH5E60iAj9XPiB2eVT0YCuKNkAAAAAElFTkSuQmCC);background-position:100% 50%;background-repeat:no-repeat;background-size:14px 16px;display:inline-block;min-height:16px;padding-right:19px}.icon-dark-elixir{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAgCAMAAAA2a+hwAAAAYFBMVEUAAAAEBAQNDQ0EBAQFBQUCAgINDQ0FBQUCAgICAgIAAAAeHh4AAAAUFBQdHR0vLy8pKSkCAgIeHh4NDQ0AAAATExMaGhoICAgjIyM4ODgrKytaWlq3t7d4eHju7u6Pj49oOA2yAAAAEXRSTlMAsiw8G49Pdw7N+Wro4p/G6/z+80MAAAEzSURBVHhebdPZjoMwDAXQsiVsZcZ29i7z/385cWpABe4T0tG1iQi3i/Rt3dSX0OhqmEeY1YlaPcymBPSxNQ0Ml9hUo4FNu6+aloHSrPrd2g6kJnivd6sENiS1rRvMMb4Tq9mOWPXrTDirLO3MVezEpsYVgOMtFfQLD5WFZMkTkY2PBxYc8lItlmKwOfH1fD6gnLS99VK0KSbnHMa/9/tF8kayEQgDOkQsTc8Y1DrVk7UOQ8CUdyZgxEkQ2DJyEhIbhCkfErZiQXSWgDEJgmBWzOhLM36NRWYuFqSo8tuC+VQdm3My1eDPdk7GEssmK2/7QW2JmLE/fcaeP5hMJiL/Mf/b7J+6aA7Ic9DHSwKwmlu2y1dXGViFAJf2dGnhU/V3dbzus3TH+3L+xVqluxzd7BP/AcFeMHKCKOz3AAAAAElFTkSuQmCC);background-position:100% 50%;background-repeat:no-repeat;background-size:14px 16px;display:inline-block;min-height:16px;padding-right:19px}.button{background-image:-webkit-linear-gradient(#fcfcfc, #ececec);background-image:linear-gradient(#fcfcfc,#ececec);border:1px solid #aaa;border-radius:5px;cursor:pointer;display:inline-block;font-size:14px;font-weight:normal;line-height:1;margin:0;padding:3px 6px;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.button,.button:link,.button:visited{color:#444;text-decoration:none}.ns-touch .button:hover{background-image:-webkit-linear-gradient(#fcfcfc, #e0e0e0);background-image:linear-gradient(#fcfcfc,#e0e0e0);text-decoration:none}.button:active,.button_selected,.ns-touch .button_selected:hover{background:#e3e3e3;color:#444;text-decoration:none}.button_after{margin-left:7px}.button_reset{font-size:13px;margin-bottom:3px}.button_social{background-image:-webkit-linear-gradient(#fcfcff, #ececff);background-image:linear-gradient(#fcfcff,#ececff);border-color:#aab;padding-bottom:4px;padding-top:4px}.ns-touch .button_social:hover{background-image:-webkit-linear-gradient(#fcfcff, #e0e0ff);background-image:linear-gradient(#fcfcff,#e0e0ff)}.button_social:active{background:#e3e3ff}.button_spinner{margin-left:7px;padding-left:7px;padding-right:7px;vertical-align:middle}.s-touch .button_spinner{font-size:inherit;margin-left:9px;padding:4px 8px 5px}.button-group .button{border-radius:0;font-size:inherit;margin-left:0;margin-right:-1px;padding:4px 9px}.button-group .button:first-child{border-bottom-left-radius:5px;border-top-left-radius:5px}.button-group .button:last-child{border-bottom-right-radius:5px;border-top-right-radius:5px;margin-right:0}.button-group_settings{display:inline-block;margin-top:3px}@media (max-width: 640px) and (max-width: 640px){.button-group_switcher{font-size:12px}}.message{background:#d3ffd3;border:1px solid #7f7;border-radius:5px;font-size:14px;font-weight:normal;padding:3px 7px}.message_closeable{cursor:pointer;-webkit-tap-highlight-color:transparent}.message_after{margin-left:10px}.message_negative{background:#ffe3e3;border:1px solid #f99}.message_root{margin-bottom:15px}.message_centered{text-align:center}.message_important{font-size:16px;padding:8px 12px}@media (min-width: 641px){.col-quantity{min-width:115px}.col-barrack{min-width:57px}.col-barrack-first{min-width:63px}.message_important{margin-left:-13px;margin-right:-13px}}.favorites{margin-left:-7px}.favorite{border:1px solid #ddd;border-radius:10px;display:inline-block;font-size:13px;margin:0 13px 13px 0;padding:6px 7px 10px;vertical-align:top}.favorite_added{-webkit-animation-duration:2s;animation-duration:2s;-webkit-animation-name:blink;animation-name:blink}.favorite_deleted{opacity:0;-webkit-transition:opacity 750ms;transition:opacity 750ms}.favorite__title{-moz-box-sizing:border-box;box-sizing:border-box;font-size:14px;margin-bottom:2px;resize:vertical;width:100%}.favorite__capacity{color:#999;font-weight:bold;margin-bottom:2px}.favorite__objects{font-size:16px}.favorite__objects td{padding-right:10px}.favorite__time{color:#444;font-weight:bold;margin-top:2px}.favorite__cost{color:#777;font-weight:bold;margin-bottom:10px;margin-top:2px}footer{border-top:1px solid #ddd;color:#999;font-size:14px;margin-top:17px;padding-top:17px}footer a:link,footer a:visited{color:inherit;text-decoration:underline}footer a:active,footer a:hover{text-decoration:none}.settings{background:#f5fff5;border:1px solid #cdc;border-radius:10px;font-size:14px;margin-bottom:15px;margin-left:-10px;max-width:50em;padding:6px 10px 10px}.share{margin-bottom:30px;max-width:50em}.share-left{padding-right:12px;white-space:nowrap;width:1%}.share-right{width:100%}.share-permalink{-moz-box-sizing:border-box;box-sizing:border-box;width:100%}.help-link{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0iIzk5OSIgZD0iTTI1NiA5MGM5MS43NCAwIDE2NiA3NC4yNDQgMTY2IDE2NiAwIDkxLjc0MS03NC4yNDUgMTY2LTE2NiAxNjYtOTEuNzQxIDAtMTY2LTc0LjI0NS0xNjYtMTY2IDAtOTEuNzQxIDc0LjI0NC0xNjYgMTY2LTE2Nm0wLTQwYy0xMTMuNzcxIDAtMjA2IDkyLjIyOS0yMDYgMjA2czkyLjIyOSAyMDYgMjA2IDIwNiAyMDYtOTIuMjI5IDIwNi0yMDYtOTIuMjI5LTIwNi0yMDYtMjA2em0yLjAyNSAzMjkuNTExYy0xNC41NDYgMC0yNi4zNDMtMTEuNzk3LTI2LjM0My0yNi4zNDkgMC0xNC41NDMgMTEuNzk3LTI2LjMzNiAyNi4zNDMtMjYuMzM2IDE0LjU0OSAwIDI2LjM0MiAxMS43OTMgMjYuMzQyIDI2LjMzNiAwIDE0LjU1Mi0xMS43OTMgMjYuMzQ5LTI2LjM0MiAyNi4zNDl6bTIwLjcxLTc3Ljg2NXY0LjczOWgtNDMuNDIzdi00LjczOWMwLTEzLjQwOCAxLjk1Ni0zMC42MSAxNy41MjMtNDUuNTY1IDE1LjU2OS0xNC45NTggMzUuMDI0LTI3LjMxMiAzNS4wMjQtNDUuOTk2IDAtMjAuNjU1LTE0LjMzNS0zMS41ODEtMzIuNDA5LTMxLjU4MS0zMC4xMTYgMC0zMi4wODUgMzEuMjM0LTMyLjgyNyAzOC4xMTJoLTQyLjIzM2MxLjEyNS0zMi41NyAxNC44OTEtNzguMTI3IDc1LjMxNS03OC4xMjcgNTIuMzYzIDAgNzUuOTA1IDM1LjA3IDc1LjkwNSA2Ny45NTcgMCA1Mi4zNDctNTIuODc1IDYxLjQ0LTUyLjg3NSA5NS4yeiIvPjwvc3ZnPg==);background-position:50% 50%;background-repeat:no-repeat;background-size:21px 21px;cursor:pointer;display:inline-block;height:17px;margin:-3px -2px -2px -2px;padding:3px 2px 2px 2px;-webkit-tap-highlight-color:transparent;vertical-align:middle;width:17px}.help-tooltip{background:#feffd6;border:1px solid #cecfc6;border-radius:5px;box-shadow:0 2px 5px rgba(0,0,0,0.17);font-size:13px;max-width:250px;opacity:0;padding:5px 10px;position:absolute;-webkit-transition:opacity 125ms;transition:opacity 125ms;z-index:10}.help-tooltip:after{background:#feffd6;border-color:#cecfc6;border-style:solid;border-width:1px 0 0 1px;content:'';height:10px;left:19px;position:absolute;top:-6px;-webkit-transform:rotate(45deg);transform:rotate(45deg);width:10px}.help-tooltip_right:after{left:auto;right:19px}.help-tooltip_visible{opacity:1;-webkit-transition:opacity 250ms;transition:opacity 250ms}.menu{background:#fefefe;box-shadow:0 2px 5px 0 rgba(0,0,0,0.17);font-size:0;left:0;padding:0 20px 0;position:fixed;top:0;width:100%;z-index:50}.menu__item{border-radius:0;color:#444;cursor:pointer;display:inline-block;font-size:14px;-webkit-font-smoothing:subpixel-antialiased;height:34px;line-height:34px;padding:0 8px;-webkit-tap-highlight-color:transparent}.menu__item:active,.menu__item_selected,.ns-touch .menu__item:hover{background-color:#cfc;color:#111}.menu__item_logo{background-image:url(/clash-of-clans/i/logo.svg);background-position:50% 50%;background-repeat:no-repeat;background-size:90px 13px;margin-left:-8px;vertical-align:bottom;width:90px}.button-group_switcher,.help-link__content,.menu__item_mobile{display:none}@media (max-width: 640px){body{line-height:1.3;padding:10px}body.index{padding-top:44px}h1{font-size:16px}.data-wrapper{margin:0 -10px}.data{width:100%}.data td,.data th{padding-left:5px;padding-right:5px}.data td:first-child,.data th:first-child{padding-left:10px}.data td:last-child,.data th:last-child{padding-right:10px}.data_buildings td:last-child{padding-left:3px;padding-right:4px;white-space:nowrap}.data_buildings select{margin-right:0}.data__object-title,.object-text{display:none}.button-group_switcher{display:block;font-size:13px;margin-top:5px}.message{border-left:0;border-radius:0;border-right:0;display:block;margin-bottom:10px;margin-left:-10px;margin-right:-10px;margin-top:5px;padding-left:10px;padding-right:10px}.message_centered{text-align:left}.favorite__objects,.message_important,body,h2{font-size:15px}footer{margin-left:-10px;margin-right:-10px;margin-top:12px;padding-left:10px;padding-right:10px;padding-top:10px}.button,.data th,.data__time,.favorite__title,.message,.object-text,.settings,.small,footer,h3{font-size:13px}.settings{border-left:0;border-radius:0;border-right:0;margin-left:-10px;margin-right:-10px}.button_reset,.data_buildings,.favorite,.help-tooltip,.tiny,select{font-size:12px}.menu{padding:0 10px}.menu__item_mobile{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZD0iTTQ2MiAxNjMuNWgtNDEydi02NWg0MTJ2NjV6bTAgNjBoLTQxMnY2NWg0MTJ2LTY1em0wIDEyNWgtNDEydjY1aDQxMnYtNjV6Ii8+PC9zdmc+);background-position:50% 50%;background-repeat:no-repeat;background-size:24px 24px;display:inline-block;position:absolute;right:18px;top:0;vertical-align:top;width:40px}.menu__items{background:#fefefe;box-shadow:-2px 2px 5px 0 rgba(0,0,0,0.17);opacity:0;position:absolute;top:34px;-webkit-transition:opacity 125ms;transition:opacity 125ms}.menu__items_active{display:block;opacity:1;-webkit-transition:opacity 250ms;transition:opacity 250ms}.menu__items .menu__item{display:block;padding-left:10px;padding-right:13px;text-align:left;width:100%}}</style>
+<link rel=icon href=/clash-of-clans/i/favicon-v2.png>
+</head>
+<body>
+<h1>
+<a href="/clash-of-clans/" class=logo></a><br>
+<span style="display: none">Clash Calc — </span>Version History
+</h1>
+<div class=list-content>
+<h3>
+6.26<br>
+<span class=list-content__date>4 May, 2016</span>
+</h3>
+<p>May 2016 Balancing Update:</p>
+<ul>
+<li>2× faster brewing for all Spells.</li>
+<li>2× faster training for Dragon, Witch and Wall Breaker.</li>
+<li>3× faster training for Golem, Lava Hound and P.E.K.K.A.</li>
+<li>1.5× faster training for Balloon, Wizard, Healer, Valkyrie and Bowler.</li>
+</ul>
+<h3>
+6.25<br>
+<span class=list-content__date>22 March, 2016</span>
+</h3>
+<ul>
+<li>Fixed relation of Haste spell level to Town Hall level.</li>
+</ul>
+<h3>
+6.24<br>
+<span class=list-content__date>21 March, 2016</span>
+</h3>
+<p>Game version 8.212.1 updates (21/03):</p>
+<ul>
+<li>Added Town Hall level 11 to Settings block.</li>
+<li>Added Dark Barracks level 7.</li>
+<li>Added Bowler.</li>
+<li>Added Goblin level 7, Hog Rider level 6, Valkyrie level 5.</li>
+<li>Goblin level 6 moved to Town Hall level 9.</li>
+<li>Decreased brewing time of some spells.</li>
+</ul>
+<h3>
+6.23<br>
+<span class=list-content__date>13 January, 2016</span>
+</h3>
+<ul>
+<li>Fixed Freeze Spell and Spell Factory level accordance.</li>
+</ul>
+<h3>
+6.22<br>
+<span class=list-content__date>10 January, 2016</span>
+</h3>
+<ul>
+<li>Fixed maximum spells capacity on Town Hall level 9.</li>
+<li>Fixed cost of Jump Spell level 2.</li>
+</ul>
+<h3>
+6.21<br>
+<span class=list-content__date>21 December, 2015</span>
+</h3>
+<ul>
+<li>Fixed relation of Freeze spell level to Town Hall level.</li>
+</ul>
+<h3>
+6.20<br>
+<span class=list-content__date>15 December, 2015</span>
+</h3>
+<p>Game version 8.67.3 updates (10/12):</p>
+<ul>
+<li>Added Minion level 7.</li>
+<li>Added Witch level 3.</li>
+<li>Freeze spell now unlocked on Town Hall level 9 instead of 10.</li>
+</ul>
+<h3>
+6.19<br>
+<span class=list-content__date>16 November, 2015</span>
+</h3>
+<ul>
+<li>Set P.E.K.K.A to level 5 (instead of 4) when select Town Hall level 10..</li>
+</ul>
+<h3>
+6.18<br>
+<span class=list-content__date>17 September, 2015</span>
+</h3>
+<ul>
+<li>Added Lightning Spell level 7.</li>
+</ul>
+<h3>
+6.17<br>
+<span class=list-content__date>8 September, 2015</span>
+</h3>
+<ul>
+<li>Implemented multiline title in the saved compositions.</li>
+</ul>
+<h3>
+6.16<br>
+<span class=list-content__date>24 July, 2015</span>
+</h3>
+<ul>
+<li>Fix incorrect spells space in the favorites.</li>
+</ul>
+<h3>
+6.15<br>
+<span class=list-content__date>10 July, 2015</span>
+</h3>
+<ul>
+<li>Fixed training cost of Archer, Dragon and P.E.K.K.A.</li>
+</ul>
+<h3>
+6.14<br>
+<span class=list-content__date>6 July, 2015</span>
+</h3>
+<ul>
+<li>Added Dark Spells. Thanks to Mikkel Nordskjold for help with icons.</li>
+</ul>
+<h3>
+6.13<br>
+<span class=list-content__date>2 July, 2015</span>
+</h3>
+<ul>
+<li>Added Dragon level 5.</li>
+<li>Changed training cost of Barbarian, Archer, Dragon and P.E.K.K.A.</li>
+</ul>
+<h3>
+6.12<br>
+<span class=list-content__date>18 May, 2015</span>
+</h3>
+<ul>
+<li>Returned cost and time for Balloons and Hog Riders.</li>
+</ul>
+<h3>
+6.11<br>
+<span class=list-content__date>12 May, 2015</span>
+</h3>
+<ul>
+<li>Half the time and half the cost for Balloons and Hog Riders.</li>
+</ul>
+<h3>
+6.10<br>
+<span class=list-content__date>25 February, 2015</span>
+</h3>
+<ul>
+<li>Added custom color for Android Chrome on Lollipop.</li>
+<li>Fixed rare bug with incorrect titles in favorites.</li>
+</ul>
+<h3>
+6.9<br>
+<span class=list-content__date>14 December, 2014</span>
+</h3>
+<ul>
+<li>The cost of Giants level 1-5 is reduced by 250 Elixir.</li>
+</ul>
+<h3>
+6.8<br>
+<span class=list-content__date>12 December, 2014</span>
+</h3>
+<ul>
+<li>Due to changes in 11/12 Winter Update, changed order of Goblin and Giant, now Giant comes first.</li>
+</ul>
+<h3>
+6.7<br>
+<span class=list-content__date>11 December, 2014</span>
+</h3>
+<ul>
+<li>Added Giant level 7.</li>
+</ul>
+<h3>
+6.6<br>
+<span class=list-content__date>1 September, 2014</span>
+</h3>
+<ul>
+<li>Added Lava Hound and Dark Barracks level 6.</li>
+<li>Added Barbarian level 7.</li>
+<li>Added Archer level 7.</li>
+<li>Reduced training time for Valkyrie.</li>
+<li>Returned cost and training time for Wizard.</li>
+</ul>
+<h3>
+6.5<br>
+<span class=list-content__date>1 September, 2014</span>
+</h3>
+<ul>
+<li>Temporary reduced cost and training time for Wizard.</li>
+</ul>
+<h3>
+6.4<br>
+<span class=list-content__date>5 August, 2014</span>
+</h3>
+<ul>
+<li>Now you can select zero level of the first barrack.</li>
+<li>Optimized distribution of troops between the barracks in rare cases.</li>
+<li>“Favorites” renamed to “Saved Army Compositions”.</li>
+<li>Added hint for “Saved Army Compositions”.</li>
+<li>Added hint for “Exceeded training capacity…”.</li>
+<li>Fixed a bug related to change of screen orientation on some devices.</li>
+</ul>
+<h3>
+6.3<br>
+<span class=list-content__date>22 July, 2014</span>
+</h3>
+<ul>
+<li>Fixed a bug with non-working +/- buttons when device supports touch and mouse input at the same time.</li>
+</ul>
+<h3>
+6.2<br>
+<span class=list-content__date>16 July, 2014</span>
+</h3>
+<ul>
+<li>Fixed share link with quotes at the end.</li>
+</ul>
+<h3>
+6.1<br>
+<span class=list-content__date>10 July, 2014</span>
+</h3>
+<ul>
+<li>Fixed a bug with the incorrect distribution between the Dark Barracks.</li>
+<li>Clash Calc was not initialized in rare cases. It’s fixed now.</li>
+</ul>
+<h3>
+6.0<br>
+<span class=list-content__date>9 July, 2014</span>
+</h3>
+<ul>
+<li>Mobile optimized version.</li>
+<li>Editable titles in Favorites.</li>
+<li>Redesigned menu.</li>
+<li>Improved page load time.</li>
+<li>Fixed a message when using Safari in Private Mode.</li>
+<li>Fixed a rare bug when scrolling stuck in place.</li>
+<li>Fixed incorrect behavior of the help tooltip in Internet Explorer.</li>
+</ul>
+<h3>
+5.3<br>
+<span class=list-content__date>3 July, 2014</span>
+</h3>
+<ul>
+<li>P.E.K.K.A level 5.</li>
+<li>Jump Spell level 3.</li>
+<li>Reduced training cost for P.E.K.K.A level 3 and 4.</li>
+</ul>
+<h3>
+5.2<br>
+<span class=list-content__date>20 May, 2014</span>
+</h3>
+<ul>
+<li>Fixed a bug with the incorrect grand total when “Subtract” column is used.</li>
+</ul>
+<h3>
+5.1<br>
+<span class=list-content__date>6 April, 2014</span>
+</h3>
+<ul>
+<li>Fixed a bug with the incorrect distribution between the barracks in rare cases.</li>
+</ul>
+<h3>
+5.0<br>
+<span class=list-content__date>26 February, 2014</span>
+</h3>
+<ul>
+<li>Added hints on controversial moments (click on the question mark icon to see a hint).</li>
+<li>Added highlighting of the changed settings when select level of the Town Hall.</li>
+<li>Removed Setting Mode switcher, it’s always enabled.</li>
+<li>Optimized tables layout.</li>
+</ul>
+<h3>
+4.6<br>
+<span class=list-content__date>16 February, 2014</span>
+</h3>
+<ul>
+<li>In the Spell Factory table added row with the grand total cost for troops and spells.</li>
+<li>Optimized performance and improved usability of +/- buttons.</li>
+</ul>
+<h3>
+4.5.1<br>
+<span class=list-content__date>10 February, 2014</span>
+</h3>
+<ul>
+<li>Fixed missing icons in iOS 6.</li>
+</ul>
+<h3>
+4.5<br>
+<span class=list-content__date>9 February, 2014</span>
+</h3>
+<ul>
+<li>Fixed some rare bugs and improved stability.</li>
+</ul>
+<h3>
+4.4<br>
+<span class=list-content__date>8 February, 2014</span>
+</h3>
+<ul>
+<li>Fixed a bug related to incorrect setting the level of barracks on some Town Hall levels.</li>
+<li>Fixed a rare bug related to incorrect production time of spells when Spell Factory level was set to 0.</li>
+</ul>
+<h3>
+4.3<br>
+<span class=list-content__date>6 February, 2014</span>
+</h3>
+<ul>
+<li>Saved Compositions renamed to Favorites.</li>
+<li>Added Share to Google+ button.</li>
+<li>Sticky menu (only on desktop).</li>
+<li>Removed text representation of composition.</li>
+</ul>
+<h3>
+4.2<br>
+<span class=list-content__date>3 February, 2014</span>
+</h3>
+<ul>
+<li>Narrower header.</li>
+<li>Redesigned menu.</li>
+<li>Fixed Hog Rider level 1 training cost (was 39, now 40).</li>
+</ul>
+<h3>
+4.1<br>
+<span class=list-content__date>29 January, 2014</span>
+</h3>
+<p>Game version 5.172 updates:</p>
+<ul>
+<li>Added Minion level 6.</li>
+<li>Added Freeze Spell level 5.</li>
+<li>Increased Hog Rider training cost.</li>
+</ul>
+<h3>
+4.0<br>
+<span class=list-content__date>28 January, 2014</span>
+</h3>
+<ul>
+<li>Increased calculator performance (faster loading, better responsiveness).</li>
+<li>Animated saving and deleting of saved compositions.</li>
+<li>Slightly redesigned Setting Mode.</li>
+<li>Minor mobile-related improvements.</li>
+<li>Simplified keyboard navigation.</li>
+<li>Dropped Opera 12.1 and Safari 5.1 support (currently supported browsers is Safari 6+, Chrome 21+, Firefox 24+, IE 10+, Android 4+ and Opera 17+).</li>
+</ul>
+<h3>
+3.5<br>
+<span class=list-content__date>6 January, 2014</span>
+</h3>
+<ul>
+<li>When possible, troops distributed between the barracks into equal parts.</li>
+<li>Improved usability of plus/minus buttons (no more frozen state on desktop or failed attempts to scroll on mobile).</li>
+</ul>
+<h3>
+3.4<br>
+<span class=list-content__date>29 December, 2013</span>
+</h3>
+<ul>
+<li>Added support for “gem-boosted” Spell Factory.</li>
+<li>Improved support for non-Apple devices (Android and other mobile devices).</li>
+</ul>
+<h3>
+3.3<br>
+<span class=list-content__date>22 December, 2013</span>
+</h3>
+<ul>
+<li>Added support for “gem-boosted” Barracks and Dark Barracks.</li>
+</ul>
+<h3>
+3.2.1<br>
+<span class=list-content__date>19 November, 2013</span>
+</h3>
+<ul>
+<li>Fixed a bug with the inability to focus the input field in some cases.</li>
+<li>Fixed a bug related to preset levels according to the Town Hall level 2.</li>
+<li>Fixed a bug in Safari 5 and 6 related to setting mode.</li>
+</ul>
+<h3>
+3.2<br>
+<span class=list-content__date>16 November, 2013</span>
+</h3>
+<ul>
+<li>Added Setting Mode with the possibility of preset levels of buildings, troops and spells according to the level of the Town Hall.</li>
+<li>Values from the “Subtract” columns not preserved between browser sessions anymore.</li>
+<li>Zeros no longer used for empty values in the text fields.</li>
+<li>Added display of the queue length for barracks.</li>
+<li>Dropped IE 9 support (currently supported browsers is Safari 5.1+, Chrome 21+, Firefox 17+, IE 10+, Android 4+ and Opera 12.1+).</li>
+</ul>
+<h3>
+3.1<br>
+<span class=list-content__date>6 November, 2013</span>
+</h3>
+<ul>
+<li>The cost of spells now in Elixir instead of Gold.</li>
+<li>Added Goblin level 6.</li>
+<li>Fixed a bug associated with the inability to open some shared compositions.</li>
+<li>“Too many units” message changed to “Exceeded the maximum queue length of the barracks”.</li>
+<li>Updated home screen icons for iOS 7.</li>
+<li>Added tooltip for troops icons.</li>
+</ul>
+<h3>
+3.0<br>
+<span class=list-content__date>10 October, 2013</span>
+</h3>
+<ul>
+<li>Troops and spells icons.</li>
+<li>Production time in saved compositions.</li>
+<li>Huge performance improvements on iOS.</li>
+<li>Increased default page zoom on iOS.</li>
+<li>Bigger +/- buttons on iOS.</li>
+<li>On the big screens shows two tables in a row.</li>
+<li>Removed links to wiki.</li>
+</ul>
+<h3>
+2.19<br>
+<span class=list-content__date>10 September, 2013</span>
+</h3>
+<ul>
+<li>If all the barracks of the same level, they are sorted according army creation time.</li>
+</ul>
+<h3>
+2.18<br>
+<span class=list-content__date>2 September, 2013</span>
+</h3>
+<p>Game version 4.120 updates:</p>
+<ul>
+<li>Decreased training time for Wizard, Balloon and Hog Rider.</li>
+<li>Decreased price for Healing, Rage, Jump and Freeze spells.</li>
+<li>Added Wizard level 6 and Freeze spell level 4.</li>
+<li>Also fixed bug when part of the army did not appear in the saved compositions in some cases.</li>
+</ul>
+<h3>
+2.17<br>
+<span class=list-content__date>20 August, 2013</span>
+</h3>
+<ul>
+<li>Optimized distribution of troops between the barracks, especially for easy filling.</li>
+</ul>
+<h3>
+2.16<br>
+<span class=list-content__date>15 August, 2013</span>
+</h3>
+<ul>
+<li>Added menu for easier navigation.</li>
+</ul>
+<h3>
+2.15<br>
+<span class=list-content__date>13 August, 2013</span>
+</h3>
+<p>Fixed bugs:</p>
+<ul>
+<li>Dark Barracks level 5 queue capacity increased to 80.</li>
+<li>Witch is now displayed in the saved compositions.</li>
+<li>Troops that not suitable for barracks levels is not displayed in the saved compositions.</li>
+</ul>
+<h3>
+2.16<br>
+<span class=list-content__date>13 August, 2013</span>
+</h3>
+<ul>
+<li>Added a field with a textual representation of the current composition.</li>
+<li>“Share Composition” block does not displayed if no troops or spells are selected.</li>
+</ul>
+<h3>
+2.14<br>
+<span class=list-content__date>31 July, 2013</span>
+</h3>
+<p>Game version 4.74 updates:</p>
+<ul>
+<li>Added Wall Breaker level 6.</li>
+<li>Added Witch (and Dark Barracks level 5).</li>
+<li>Decreased Hog Rider’s housing space from 6 to 5.</li>
+<li>Decreased Valkyrie’s training cost.</li>
+</ul>
+<h3>
+2.13<br>
+<span class=list-content__date>27 July, 2013</span>
+</h3>
+<ul>
+<li>When loading a saved composition the page scrolls to the Barracks table.</li>
+</ul>
+<h3>
+2.12<br>
+<span class=list-content__date>1 July, 2013</span>
+</h3>
+<ul>
+<li>Now you can increase or decrease the values in the text fields using the up and down arrow keys on the keyboard.</li>
+<li>Fixed inability to choose five spells.</li>
+<li>Display of troops/spells level and Amry Camps/Spell Factory capacity removed from the saved compositions.</li>
+<li>Comments moved to a separate page, added “Contact Me” section, share buttons removed from the top.</li>
+</ul>
+<h3>
+2.11<br>
+<span class=list-content__date>17 June, 2013</span>
+</h3>
+<p>Game version 4.53 updates:</p>
+<ul>
+<li>Freeze spell, level 6 Lighting and Heal spells.</li>
+<li>P.E.K.K.A level 4.</li>
+<li>Army Camps maximum capacity increased to 240 troops.</li>
+</ul>
+<h3>
+2.10<br>
+<span class=list-content__date>16 June, 2013</span>
+</h3>
+<ul>
+<li>Fixed iOS third-party browsers bug (when was shown only a white screen).</li>
+<li>Buildings settings moved to the main tables.</li>
+<li>Army camps capacity is now selected from the list of predefined values.</li>
+<li>Slightly changed appearance.</li>
+<li>Fixed a bug when repeated composition saved again due to subtract values.</li>
+</ul>
+<h3>
+2.9<br>
+<span class=list-content__date>12 June, 2013</span>
+</h3>
+<ul>
+<li>Added “Share Composition” feature, now you can quickly and easily share your army composition with friends.</li>
+<li>The word “calculation” as the name for the combination of the army, spells and buildings replaced by the word “composition”.</li>
+<li>Repeated composition now are not saved when you press “Save Composition”.</li>
+<li>Fixed iOS Home Screen shortcut bug (when was shown only a white screen).</li>
+</ul>
+<h3>
+2.8.4<br>
+<span class=list-content__date>7 June, 2013</span>
+</h3>
+<ul>
+<li>Created <a href=https://twitter.com/ClashCalc target=_blank>Twitter account</a> to post updates and other useful information.</li>
+<li>Added share buttons and Twitter follow link.</li>
+<li>Some text info from the top is placed above the comments section.</li>
+</ul>
+<h3>
+2.8.3<br>
+<span class=list-content__date>4 June, 2013</span>
+</h3>
+<ul>
+<li>Added total cost with subtracted troops.</li>
+</ul>
+<h3>
+2.8.2<br>
+<span class=list-content__date>28 May, 2013</span>
+</h3>
+<ul>
+<li>Once again, optimized distribution of troops between the barracks, especially when the difference between the levels of the barracks is significant.</li>
+<li>Added copyright warning to the description of the page.</li>
+<li>Added license.</li>
+<li>Changed title.</li>
+</ul>
+<h3>
+2.8.1<br>
+<span class=list-content__date>23 May, 2013</span>
+</h3>
+<ul>
+<li>Optimized distribution of troops between the barracks when the maximum troop level less than the minimum barrack level.</li>
+</ul>
+<h3>
+2.8<br>
+<span class=list-content__date>23 May, 2013</span>
+</h3>
+<p>Game version 4.14 updates:</p>
+<ul>
+<li>Added Healer level 4.</li>
+<li>Healer training time decreased from 20 to 15 minutes, housing space requirement decreased from 20 to 14 and training cost decreased for all levels.</li>
+<li>Added Dragon level 4.</li>
+<li>Added Golem level 5.</li>
+</ul>
+<h3>
+2.7<br>
+<span class=list-content__date>22 May, 2013</span>
+</h3>
+<ul>
+<li>Fixed several bugs regarding the distribution of troops between barracks.</li>
+<li>What’s New block and Version History box.</li>
+</ul>
+<h3>
+2.6.1<br>
+<span class=list-content__date>6 May, 2013</span>
+</h3>
+<ul>
+<li>Fixed a bug on iPhone/iPad when many troops cause lags.</li>
+<li>Bigger buttons to simplify tapping on iPhone/iPad (and other minor improvements: reduced indents, reduced font size of the headers, width set to fit the content).</li>
+<li>Fixed a bug when all troops goes to a single barrack.</li>
+</ul>
+<h3>
+2.6<br>
+<span class=list-content__date>5 May, 2013</span>
+</h3>
+<ul>
+<li>Grouping troops of the same type in distribution between the barracks (as much as possible).</li>
+<li>Improved distribution between the barracks to reduce the time of production.</li>
+<li>Performance optimizations (primarily on iPhone/iPad).</li>
+</ul>
+<h3>
+2.5.1<br>
+<span class=list-content__date>29 April, 2013</span>
+</h3>
+<ul>
+<li>The maximum value of Army Camps Capacity limited to 220.</li>
+</ul>
+<h3>
+2.5<br>
+<span class=list-content__date>25 April, 2013</span>
+</h3>
+<ul>
+<li>Dramatically increased performance, especially on iPhone/iPad.</li>
+</ul>
+<h3>
+2.4.4<br>
+<span class=list-content__date>21 April, 2013</span>
+</h3>
+<ul>
+<li>Removed “Cost” column.</li>
+<li>Removed background highlighting on table rows.</li>
+<li>Removed help link for subtract.</li>
+<li>Form controls optimized for touch-devices.</li>
+<li>Wikia links.</li>
+<li>Fixed a bug in which a long press on the plus/minus led to the selection of the text.</li>
+<li>Reduced internal indent in the tables.</li>
+</ul>
+<h3>
+2.4.3<br>
+<span class=list-content__date>17 April, 2013</span>
+</h3>
+<ul>
+<li>Subtract values does not saved with “Save Calculation” feature anymore.</li>
+<li>Fixed iOS/Windows buttons height.</li>
+<li>Fixed buttons gradient on Safari/Chrome/iOS.</li>
+<li>Font for iOS changed to Arial.</li>
+</ul>
+<h3>
+2.4.2<br>
+<span class=list-content__date>17 April, 2013</span>
+</h3>
+<p>Game version 3.124 updates:</p>
+<ul>
+<li>Dark Barracks max level increased to 4.</li>
+<li>Added Golem to Dark Barracks.</li>
+<li>Production time for spells decreased: Lighting/Healing — 30m, Rage/Jump — 45m.</li>
+</ul>
+<h3>
+2.4.1<br>
+<span class=list-content__date>16 April, 2013</span>
+</h3>
+<ul>
+<li>Added reset buttons.</li>
+<li>New appearance for buttons.</li>
+</ul>
+<h3>
+2.4<br>
+<span class=list-content__date>14 April, 2013</span>
+</h3>
+<ul>
+<li>Added awesome feature to “subtract” troops, which you already have. For example, you want to get 100 Barbarians and 100 Archers. And you already have 20 Barbarians. In the column “Quantity”, as usual, make 100 Barbarians and 100 Archers. And in the column “Subtract” 20 Barbarians. Now the distribution between the barracks are considered to be only for 80 Barbarians and 100 Archers. This is very useful, when after the battle you have remained part of the army.</li>
+</ul>
+<h3>
+2.3.1<br>
+<span class=list-content__date>12 April, 2013</span>
+</h3>
+<ul>
+<li>The correct order for keyboard navigation through <kbd>TAB</kbd> key.</li>
+<li>Production time for each troop separately are no longer displayed (useless information).</li>
+</ul>
+<h3>
+2.3<br>
+<span class=list-content__date>11 April, 2013</span>
+</h3>
+<ul>
+<li>Added lovely icon for iOS “Add to Home Screen” feature.</li>
+<li>New favicon for easy identification of the site among many open tabs.</li>
+<li>Retina graphics.</li>
+<li>Internal optimizations for better performance.</li>
+</ul>
+<h3>
+2.2<br>
+<span class=list-content__date>8 April, 2013</span>
+</h3>
+<ul>
+<li>Dark Barracks troops distribution.</li>
+<li>Removed embedded font, font changed to PT Sans/Helvetica Neue/Arial, it greatly reduced the speed of page loading.</li>
+<li>Army camps capacity increment/decrement in five points.</li>
+</ul>
+<h3>
+2.1<br>
+<span class=list-content__date>13 March, 2013</span>
+</h3>
+<ul>
+<li>Dark Barracks troops calculation.</li>
+</ul>
+<h3>
+2.0.2<br>
+<span class=list-content__date>12 March, 2013</span>
+</h3>
+<p>Game version 3.54 updates:</p>
+<ul>
+<li>Wall Breaker capacity increased from 1 to 2.</li>
+<li>P.E.K.K.A training time reduced from 1 hour to 45 minutes.</li>
+<li>P.E.K.K.A and Dragon costs reduced.</li>
+</ul>
+<h3>
+2.0.1<br>
+<span class=list-content__date>5 March, 2013</span>
+</h3>
+<ul>
+<li>Fixed a bug in which the troops were distributed in barracks without accounting maximum barracks queue.</li>
+<li>Fixed bug with negative number of troops.</li>
+</ul>
+<h3>
+2.0<br>
+<span class=list-content__date>28 February, 2013</span>
+</h3>
+<ul>
+<li>Added distribution of troops between barracks for optimal training speed.</li>
+<li>The previous values of the maximum level and number of barracks, unfortunately, have not saved.</li>
+<li>Production Time removed from saved calculations list.</li>
+<li>Simplified tables layouts.</li>
+</ul>
+<h3>
+1.5<br>
+<span class=list-content__date>26 February, 2013</span>
+</h3>
+<ul>
+<li>Reduced indents and font sizes.</li>
+<li>The list of saved calculations is always shown.</li>
+<li>Redesigned saved calculations layout.</li>
+</ul>
+<h3>
+1.4<br>
+<span class=list-content__date>17 February, 2013</span>
+</h3>
+<ul>
+<li>Added saving of calculations.</li>
+</ul>
+<h3>
+1.3.2<br>
+<span class=list-content__date>10 February, 2013</span>
+</h3>
+<ul>
+<li>Added description of the calculator.</li>
+<li>Default values changed to maximum allowed in game.</li>
+</ul>
+<h3>
+1.3.1<br>
+<span class=list-content__date>9 February, 2013</span>
+</h3>
+<ul>
+<li>Added auto-select of text in fields for simplify edit in iOS.</li>
+<li>Fixed NaN in results and null in fields bug.</li>
+</ul>
+<h3>
+1.3<br>
+<span class=list-content__date>8 February, 2013</span>
+</h3>
+<ul>
+<li>The title is replaced by the more similar to the contents of the page.</li>
+<li>Added description for auto-save feature.</li>
+<li>Added army camps capacity — allows to show free capacity.</li>
+<li>Added maximum barracks level — allows show/hide unavailable troops.</li>
+<li>Added spells calculation.</li>
+</ul>
+<h3>
+1.2<br>
+<span class=list-content__date>6 February, 2013</span>
+</h3>
+<ul>
+<li>Added plus/minus buttons.</li>
+<li>Fixed IE 9+ support.</li>
+<li>Changed favicon to app store game icon.</li>
+<li>Added elixir icon to costs.</li>
+<li>Added intermediate results of the calculations to the troops table.</li>
+</ul>
+<h3>
+1.1<br>
+<span class=list-content__date>5 February, 2013</span>
+</h3>
+<ul>
+<li>Added sixth level for Barbarian, Archer, Giant and Balloon.</li>
+<li>Fixed Healer 1st level cost.</li>
+<li>Number of barracks field replaced by the select.</li>
+</ul>
+<h3>
+1.0<br>
+<span class=list-content__date>4 February, 2013</span>
+</h3>
+<ul>
+<li>Initial release.</li>
+</ul>
+</div>
+<script>!function(a,e,n){var t=function(){if(!e.yandexMetrikaParams||!Object.keys)return null;var a=Object.keys(e.yandexMetrikaParams);if(!a.length)return null;var n={};return a.forEach(function(a){n[a]=e.yandexMetrikaParams[a],delete e.yandexMetrikaParams[a]}),n};(e[n]=e[n]||[]).push(function(){try{e.yaCounter19642528=new Ya.Metrika({id:19642528,trackLinks:!0,accurateTrackBounce:!0,params:t()}),e.yandexMetrikaLoadCallback&&e.yandexMetrikaLoadCallback(e.yaCounter19642528),e.addEventListener("load",function(){var a=t();null!==a&&e.yaCounter19642528.params(a)},!1)}catch(a){}});var r=a.createElement("script");r.src="//mc.yandex.ru/metrika/watch.js",a.head.appendChild(r)}(document,window,"yandex_metrika_callbacks"),function(a,e,n){a.GoogleAnalyticsObject=n,a[n]=a[n]||function(){(a[n].q=a[n].q||[]).push(arguments)},a[n].l=1*new Date;var t=e.createElement("script");t.src="//www.google-analytics.com/analytics.js",e.head.appendChild(t)}(window,document,"ga"),ga("create","UA-37991363-1","mkln.ru"),ga("send","pageview");</script>
+<noscript><img src="//mc.yandex.ru/watch/19642528" style="position:absolute; left:-9999px"/></noscript>
+</body>
+</html>

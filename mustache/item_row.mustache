@@ -1,0 +1,42 @@
+<tr id="{{rowId}}">
+    <td>
+        <span class="object-icon __{{id}}"{{^spells}} title="{{title}}"{{/spells}}></span>
+        {{#spells}}
+            <span class="object-text">{{title}}</span>
+        {{/spells}}
+    </td>
+    <td class="tiny js-col-{{type}}-level">
+        <select id="{{id}}-level" class="js-comp-level" data-type="{{type}}">
+            {{#levelContent}}
+                <option value="{{text}}"{{#selected}} selected="selected"{{/selected}}>{{text}}</option>
+            {{/levelContent}}
+        </select>
+    </td>
+    <td class="js-col-{{type}}-quantity">
+        <input pattern="[0-9]*"
+               data-type="{{type}}"
+               class="js-number js-comp-quantity"
+               id="{{id}}"
+               size="3"
+               tabindex="{{tabIndexValue}}"/><!--
+        --><span class="button button_spinner js-spinner" data-for="{{id}}">+</span><!--
+        --><span class="button button_spinner js-spinner" data-for="{{id}}">&minus;</span>
+    </td>
+    <td id="{{id}}-summary" class="number tiny js-col-{{type}}-total">
+    </td>
+    {{#subtractId}}
+        <td class="js-col-{{type}}-subtract">
+            <input pattern="[0-9]*"
+                   data-type="{{type}}"
+                   class="js-number js-comp-subtract"
+                   id="{{subtractId}}"
+                   size="3"
+                   tabindex="{{tabIndexSubtract}}"/><!--
+        --><span class="button button_spinner js-spinner" data-for="{{subtractId}}">+</span><!--
+        --><span class="button button_spinner js-spinner" data-for="{{subtractId}}">&minus;</span>
+        </td>
+    {{/subtractId}}
+    {{#barracksTimes}}
+        <td id="{{barrackQuantityId}}" class="number js-col-{{type}}-barrack"></td>
+    {{/barracksTimes}}
+</tr>

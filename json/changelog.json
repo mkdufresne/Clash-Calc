@@ -1,0 +1,768 @@
+[
+    [
+        "6.26",
+        "4 May, 2016",
+        [
+            "2× faster brewing for all Spells",
+            "2× faster training for Dragon, Witch and Wall Breaker",
+            "3× faster training for Golem, Lava Hound and P.E.K.K.A",
+            "1.5× faster training for Balloon, Wizard, Healer, Valkyrie and Bowler"
+        ],
+        "May 2016 Balancing Update:"
+    ],
+    [
+        "6.25",
+        "22 March, 2016",
+        [
+            "Fixed relation of Haste spell level to Town Hall level"
+        ]
+    ],
+    [
+        "6.24",
+        "21 March, 2016",
+        [
+            "Added Town Hall level 11 to Settings block",
+            "Added Dark Barracks level 7",
+            "Added Bowler",
+            "Added Goblin level 7, Hog Rider level 6, Valkyrie level 5",
+            "Goblin level 6 moved to Town Hall level 9",
+            "Decreased brewing time of some spells"
+        ],
+        "Game version 8.212.1 updates (21/03):"
+    ],
+    [
+        "6.23",
+        "13 January, 2016",
+        [
+            "Fixed Freeze Spell and Spell Factory level accordance"
+        ]
+    ],
+    [
+        "6.22",
+        "10 January, 2016",
+        [
+            "Fixed maximum spells capacity on Town Hall level 9",
+            "Fixed cost of Jump Spell level 2"
+        ]
+    ],
+    [
+        "6.21",
+        "21 December, 2015",
+        [
+            "Fixed relation of Freeze spell level to Town Hall level"
+        ]
+    ],
+    [
+        "6.20",
+        "15 December, 2015",
+        [
+            "Added Minion level 7",
+            "Added Witch level 3",
+            "Freeze spell now unlocked on Town Hall level 9 instead of 10"
+        ],
+        "Game version 8.67.3 updates (10/12):"
+    ],
+    [
+        "6.19",
+        "16 November, 2015",
+        [
+            "Set P.E.K.K.A to level 5 (instead of 4) when select Town Hall level 10."
+        ]
+    ],
+    [
+        "6.18",
+        "17 September, 2015",
+        [
+            "Added Lightning Spell level 7"
+        ]
+    ],
+    [
+        "6.17",
+        "8 September, 2015",
+        [
+            "Implemented multiline title in the saved compositions"
+        ]
+    ],
+    [
+        "6.16",
+        "24 July, 2015",
+        [
+            "Fix incorrect spells space in the favorites"
+        ]
+    ],
+    [
+        "6.15",
+        "10 July, 2015",
+        [
+            "Fixed training cost of Archer, Dragon and P.E.K.K.A"
+        ]
+    ],
+    [
+        "6.14",
+        "6 July, 2015",
+        [
+            "Added Dark Spells. Thanks to Mikkel Nordskjold for help with icons"
+        ]
+    ],
+    [
+        "6.13",
+        "2 July, 2015",
+        [
+            "Added Dragon level 5",
+            "Changed training cost of Barbarian, Archer, Dragon and P.E.K.K.A"
+        ]
+    ],
+    [
+        "6.12",
+        "18 May, 2015",
+        [
+            "Returned cost and time for Balloons and Hog Riders"
+        ]
+    ],
+    [
+        "6.11",
+        "12 May, 2015",
+        [
+            "Half the time and half the cost for Balloons and Hog Riders"
+        ]
+    ],
+    [
+        "6.10",
+        "25 February, 2015",
+        [
+            "Added custom color for Android Chrome on Lollipop",
+            "Fixed rare bug with incorrect titles in favorites"
+        ]
+    ],
+    [
+        "6.9",
+        "14 December, 2014",
+        [
+            "The cost of Giants level 1-5 is reduced by 250 Elixir"
+        ]
+    ],
+    [
+        "6.8",
+        "12 December, 2014",
+        [
+            "Due to changes in 11/12 Winter Update, changed order of Goblin and Giant, now Giant comes first"
+        ]
+    ],
+    [
+        "6.7",
+        "11 December, 2014",
+        [
+            "Added Giant level 7"
+        ]
+    ],
+    [
+        "6.6",
+        "1 September, 2014",
+        [
+            "Added Lava Hound and Dark Barracks level 6",
+            "Added Barbarian level 7",
+            "Added Archer level 7",
+            "Reduced training time for Valkyrie",
+            "Returned cost and training time for Wizard"
+        ]
+    ],
+    [
+        "6.5",
+        "1 September, 2014",
+        [
+            "Temporary reduced cost and training time for Wizard"
+        ]
+    ],
+    [
+        "6.4",
+        "5 August, 2014",
+        [
+            "Now you can select zero level of the first barrack",
+            "Optimized distribution of troops between the barracks in rare cases",
+            "“Favorites” renamed to “Saved Army Compositions”",
+            "Added hint for “Saved Army Compositions”",
+            "Added hint for “Exceeded training capacity…”",
+            "Fixed a bug related to change of screen orientation on some devices"
+        ]
+    ],
+    [
+        "6.3",
+        "22 July, 2014",
+        [
+            "Fixed a bug with non-working +/- buttons when device supports touch and mouse input at the same time"
+        ]
+    ],
+    [
+        "6.2",
+        "16 July, 2014",
+        [
+            "Fixed share link with quotes at the end"
+        ]
+    ],
+    [
+        "6.1",
+        "10 July, 2014",
+        [
+            "Fixed a bug with the incorrect distribution between the Dark Barracks",
+            "Clash Calc was not initialized in rare cases. It’s fixed now"
+        ]
+    ],
+    [
+        "6.0",
+        "9 July, 2014",
+        [
+            "Mobile optimized version",
+            "Editable titles in Favorites",
+            "Redesigned menu",
+            "Improved page load time",
+            "Fixed a message when using Safari in Private Mode",
+            "Fixed a rare bug when scrolling stuck in place",
+            "Fixed incorrect behavior of the help tooltip in Internet Explorer"
+        ]
+    ],
+    [
+        "5.3",
+        "3 July, 2014",
+        [
+            "P.E.K.K.A level 5",
+            "Jump Spell level 3",
+            "Reduced training cost for P.E.K.K.A level 3 and 4"
+        ]
+    ],
+    [
+        "5.2",
+        "20 May, 2014",
+        [
+            "Fixed a bug with the incorrect grand total when “Subtract” column is used"
+        ]
+    ],
+    [
+        "5.1",
+        "6 April, 2014",
+        [
+            "Fixed a bug with the incorrect distribution between the barracks in rare cases"
+        ]
+    ],
+    [
+        "5.0",
+        "26 February, 2014",
+        [
+            "Added hints on controversial moments (click on the question mark icon to see a hint)",
+            "Added highlighting of the changed settings when select level of the Town Hall",
+            "Removed Setting Mode switcher, it’s always enabled",
+            "Optimized tables layout"
+        ]
+    ],
+    [
+        "4.6",
+        "16 February, 2014",
+        [
+            "In the Spell Factory table added row with the grand total cost for troops and spells",
+            "Optimized performance and improved usability of +/- buttons"
+        ]
+    ],
+    [
+        "4.5.1",
+        "10 February, 2014",
+        [
+            "Fixed missing icons in iOS 6"
+        ]
+    ],
+    [
+        "4.5",
+        "9 February, 2014",
+        [
+            "Fixed some rare bugs and improved stability"
+        ]
+    ],
+    [
+        "4.4",
+        "8 February, 2014",
+        [
+            "Fixed a bug related to incorrect setting the level of barracks on some Town Hall levels",
+            "Fixed a rare bug related to incorrect production time of spells when Spell Factory level was set to 0"
+        ]
+    ],
+    [
+        "4.3",
+        "6 February, 2014",
+        [
+            "Saved Compositions renamed to Favorites",
+            "Added Share to Google+ button",
+            "Sticky menu (only on desktop)",
+            "Removed text representation of composition"
+        ]
+    ],
+    [
+        "4.2",
+        "3 February, 2014",
+        [
+            "Narrower header",
+            "Redesigned menu",
+            "Fixed Hog Rider level 1 training cost (was 39, now 40)"
+        ]
+    ],
+    [
+        "4.1",
+        "29 January, 2014",
+        [
+            "Added Minion level 6",
+            "Added Freeze Spell level 5",
+            "Increased Hog Rider training cost"
+        ],
+        "Game version 5.172 updates:"
+    ],
+    [
+        "4.0",
+        "28 January, 2014",
+        [
+            "Increased calculator performance (faster loading, better responsiveness)",
+            "Animated saving and deleting of saved compositions",
+            "Slightly redesigned Setting Mode",
+            "Minor mobile-related improvements",
+            "Simplified keyboard navigation",
+            "Dropped Opera 12.1 and Safari 5.1 support (currently supported browsers is Safari 6+, Chrome 21+, Firefox 24+, IE 10+, Android 4+ and Opera 17+)"
+        ]
+    ],
+    [
+        "3.5",
+        "6 January, 2014",
+        [
+            "When possible, troops distributed between the barracks into equal parts",
+            "Improved usability of plus/minus buttons (no more frozen state on desktop or failed attempts to scroll on mobile)"
+        ]
+    ],
+    [
+        "3.4",
+        "29 December, 2013",
+        [
+            "Added support for “gem-boosted” Spell Factory",
+            "Improved support for non-Apple devices (Android and other mobile devices)"
+        ]
+    ],
+    [
+        "3.3",
+        "22 December, 2013",
+        [
+            "Added support for “gem-boosted” Barracks and Dark Barracks"
+        ]
+    ],
+    [
+        "3.2.1",
+        "19 November, 2013",
+        [
+            "Fixed a bug with the inability to focus the input field in some cases",
+            "Fixed a bug related to preset levels according to the Town Hall level 2",
+            "Fixed a bug in Safari 5 and 6 related to setting mode"
+        ]
+    ],
+    [
+        "3.2",
+        "16 November, 2013",
+        [
+            "Added Setting Mode with the possibility of preset levels of buildings, troops and spells according to the level of the Town Hall",
+            "Values from the “Subtract” columns not preserved between browser sessions anymore",
+            "Zeros no longer used for empty values in the text fields",
+            "Added display of the queue length for barracks",
+            "Dropped IE 9 support (currently supported browsers is Safari 5.1+, Chrome 21+, Firefox 17+, IE 10+, Android 4+ and Opera 12.1+)"
+        ]
+    ],
+    [
+        "3.1",
+        "6 November, 2013",
+        [
+            "The cost of spells now in Elixir instead of Gold",
+            "Added Goblin level 6",
+            "Fixed a bug associated with the inability to open some shared compositions",
+            "“Too many units” message changed to “Exceeded the maximum queue length of the barracks”",
+            "Updated home screen icons for iOS 7",
+            "Added tooltip for troops icons"
+        ]
+    ],
+    [
+        "3.0",
+        "10 October, 2013",
+        [
+            "Troops and spells icons",
+            "Production time in saved compositions",
+            "Huge performance improvements on iOS",
+            "Increased default page zoom on iOS",
+            "Bigger +/- buttons on iOS",
+            "On the big screens shows two tables in a row",
+            "Removed links to wiki"
+        ]
+    ],
+    [
+        "2.19",
+        "10 September, 2013",
+        [
+            "If all the barracks of the same level, they are sorted according army creation time"
+        ]
+    ],
+    [
+        "2.18",
+        "2 September, 2013",
+        [
+            "Decreased training time for Wizard, Balloon and Hog Rider",
+            "Decreased price for Healing, Rage, Jump and Freeze spells",
+            "Added Wizard level 6 and Freeze spell level 4",
+            "Also fixed bug when part of the army did not appear in the saved compositions in some cases"
+        ],
+        "Game version 4.120 updates:"
+    ],
+    [
+        "2.17",
+        "20 August, 2013",
+        [
+            "Optimized distribution of troops between the barracks, especially for easy filling"
+        ]
+    ],
+    [
+        "2.16",
+        "15 August, 2013",
+        [
+            "Added menu for easier navigation"
+        ]
+    ],
+    [
+        "2.15",
+        "13 August, 2013",
+        [
+            "Dark Barracks level 5 queue capacity increased to 80",
+            "Witch is now displayed in the saved compositions",
+            "Troops that not suitable for barracks levels is not displayed in the saved compositions"
+        ],
+        "Fixed bugs:"
+    ],
+    [
+        "2.16",
+        "13 August, 2013",
+        [
+            "Added a field with a textual representation of the current composition",
+            "“Share Composition” block does not displayed if no troops or spells are selected"
+        ]
+    ],
+    [
+        "2.14",
+        "31 July, 2013",
+        [
+            "Added Wall Breaker level 6",
+            "Added Witch (and Dark Barracks level 5)",
+            "Decreased Hog Rider’s housing space from 6 to 5",
+            "Decreased Valkyrie’s training cost"
+        ],
+        "Game version 4.74 updates:"
+    ],
+    [
+        "2.13",
+        "27 July, 2013",
+        [
+            "When loading a saved composition the page scrolls to the Barracks table"
+        ]
+    ],
+    [
+        "2.12",
+        "1 July, 2013",
+        [
+            "Now you can increase or decrease the values in the text fields using the up and down arrow keys on the keyboard",
+            "Fixed inability to choose five spells",
+            "Display of troops/spells level and Amry Camps/Spell Factory capacity removed from the saved compositions",
+            "Comments moved to a separate page, added “Contact Me” section, share buttons removed from the top"
+        ]
+    ],
+    [
+        "2.11",
+        "17 June, 2013",
+        [
+            "Freeze spell, level 6 Lighting and Heal spells",
+            "P.E.K.K.A level 4",
+            "Army Camps maximum capacity increased to 240 troops"
+        ],
+        "Game version 4.53 updates:"
+    ],
+    [
+        "2.10",
+        "16 June, 2013",
+        [
+            "Fixed iOS third-party browsers bug (when was shown only a white screen)",
+            "Buildings settings moved to the main tables",
+            "Army camps capacity is now selected from the list of predefined values",
+            "Slightly changed appearance",
+            "Fixed a bug when repeated composition saved again due to subtract values"
+        ]
+    ],
+    [
+        "2.9",
+        "12 June, 2013",
+        [
+            "Added “Share Composition” feature, now you can quickly and easily share your army composition with friends",
+            "The word “calculation” as the name for the combination of the army, spells and buildings replaced by the word “composition”",
+            "Repeated composition now are not saved when you press “Save Composition”",
+            "Fixed iOS Home Screen shortcut bug (when was shown only a white screen)"
+        ]
+    ],
+    [
+        "2.8.4",
+        "7 June, 2013",
+        [
+            "Created <a href=\"https://twitter.com/ClashCalc\" target=\"_blank\">Twitter account</a> to post updates and other useful information",
+            "Added share buttons and Twitter follow link",
+            "Some text info from the top is placed above the comments section"
+        ]
+    ],
+    [
+        "2.8.3",
+        "4 June, 2013",
+        [
+            "Added total cost with subtracted troops"
+        ]
+    ],
+    [
+        "2.8.2",
+        "28 May, 2013",
+        [
+            "Once again, optimized distribution of troops between the barracks, especially when the difference between the levels of the barracks is significant",
+            "Added copyright warning to the description of the page",
+            "Added license",
+            "Changed title"
+        ]
+    ],
+    [
+        "2.8.1",
+        "23 May, 2013",
+        [
+            "Optimized distribution of troops between the barracks when the maximum troop level less than the minimum barrack level"
+        ]
+    ],
+    [
+        "2.8",
+        "23 May, 2013",
+        [
+            "Added Healer level 4",
+            "Healer training time decreased from 20 to 15 minutes, housing space requirement decreased from 20 to 14 and training cost decreased for all levels",
+            "Added Dragon level 4",
+            "Added Golem level 5"
+        ],
+        "Game version 4.14 updates:"
+    ],
+    [
+        "2.7",
+        "22 May, 2013",
+        [
+            "Fixed several bugs regarding the distribution of troops between barracks",
+            "What’s New block and Version History box"
+        ]
+    ],
+    [
+        "2.6.1",
+        "6 May, 2013",
+        [
+            "Fixed a bug on iPhone/iPad when many troops cause lags",
+            "Bigger buttons to simplify tapping on iPhone/iPad (and other minor improvements: reduced indents, reduced font size of the headers, width set to fit the content)",
+            "Fixed a bug when all troops goes to a single barrack"
+        ]
+    ],
+    [
+        "2.6",
+        "5 May, 2013",
+        [
+            "Grouping troops of the same type in distribution between the barracks (as much as possible)",
+            "Improved distribution between the barracks to reduce the time of production",
+            "Performance optimizations (primarily on iPhone/iPad)"
+        ]
+    ],
+    [
+        "2.5.1",
+        "29 April, 2013",
+        [
+            "The maximum value of Army Camps Capacity limited to 220"
+        ]
+    ],
+    [
+        "2.5",
+        "25 April, 2013",
+        [
+            "Dramatically increased performance, especially on iPhone/iPad"
+        ]
+    ],
+    [
+        "2.4.4",
+        "21 April, 2013",
+        [
+            "Removed “Cost” column",
+            "Removed background highlighting on table rows",
+            "Removed help link for subtract",
+            "Form controls optimized for touch-devices",
+            "Wikia links",
+            "Fixed a bug in which a long press on the plus/minus led to the selection of the text",
+            "Reduced internal indent in the tables"
+        ]
+    ],
+    [
+        "2.4.3",
+        "17 April, 2013",
+        [
+            "Subtract values does not saved with “Save Calculation” feature anymore",
+            "Fixed iOS/Windows buttons height",
+            "Fixed buttons gradient on Safari/Chrome/iOS",
+            "Font for iOS changed to Arial"
+        ]
+    ],
+    [
+        "2.4.2",
+        "17 April, 2013",
+        [
+            "Dark Barracks max level increased to 4",
+            "Added Golem to Dark Barracks",
+            "Production time for spells decreased: Lighting/Healing — 30m, Rage/Jump — 45m"
+        ],
+        "Game version 3.124 updates:"
+    ],
+    [
+        "2.4.1",
+        "16 April, 2013",
+        [
+            "Added reset buttons",
+            "New appearance for buttons"
+        ]
+    ],
+    [
+        "2.4",
+        "14 April, 2013",
+        [
+            "Added awesome feature to “subtract” troops, which you already have. For example, you want to get 100 Barbarians and 100 Archers. And you already have 20 Barbarians. In the column “Quantity”, as usual, make 100 Barbarians and 100 Archers. And in the column “Subtract” 20 Barbarians. Now the distribution between the barracks are considered to be only for 80 Barbarians and 100 Archers. This is very useful, when after the battle you have remained part of the army"
+        ]
+    ],
+    [
+        "2.3.1",
+        "12 April, 2013",
+        [
+            "The correct order for keyboard navigation through <kbd>TAB</kbd> key",
+            "Production time for each troop separately are no longer displayed (useless information)"
+        ]
+    ],
+    [
+        "2.3",
+        "11 April, 2013",
+        [
+            "Added lovely icon for iOS “Add to Home Screen” feature",
+            "New favicon for easy identification of the site among many open tabs",
+            "Retina graphics",
+            "Internal optimizations for better performance"
+        ]
+    ],
+    [
+        "2.2",
+        "8 April, 2013",
+        [
+            "Dark Barracks troops distribution",
+            "Removed embedded font, font changed to PT Sans/Helvetica Neue/Arial, it greatly reduced the speed of page loading",
+            "Army camps capacity increment/decrement in five points"
+        ]
+    ],
+    [
+        "2.1",
+        "13 March, 2013",
+        [
+            "Dark Barracks troops calculation"
+        ]
+    ],
+    [
+        "2.0.2",
+        "12 March, 2013",
+        [
+            "Wall Breaker capacity increased from 1 to 2",
+            "P.E.K.K.A training time reduced from 1 hour to 45 minutes",
+            "P.E.K.K.A and Dragon costs reduced"
+        ],
+        "Game version 3.54 updates:"
+    ],
+    [
+        "2.0.1",
+        "5 March, 2013",
+        [
+            "Fixed a bug in which the troops were distributed in barracks without accounting maximum barracks queue",
+            "Fixed bug with negative number of troops"
+        ]
+    ],
+    [
+        "2.0",
+        "28 February, 2013",
+        [
+            "Added distribution of troops between barracks for optimal training speed",
+            "The previous values of the maximum level and number of barracks, unfortunately, have not saved",
+            "Production Time removed from saved calculations list",
+            "Simplified tables layouts"
+        ]
+    ],
+    [
+        "1.5",
+        "26 February, 2013",
+        [
+            "Reduced indents and font sizes",
+            "The list of saved calculations is always shown",
+            "Redesigned saved calculations layout"
+        ]
+    ],
+    [
+        "1.4",
+        "17 February, 2013",
+        [
+            "Added saving of calculations"
+        ]
+    ],
+    [
+        "1.3.2",
+        "10 February, 2013",
+        [
+            "Added description of the calculator",
+            "Default values changed to maximum allowed in game"
+        ]
+    ],
+    [
+        "1.3.1",
+        "9 February, 2013",
+        [
+            "Added auto-select of text in fields for simplify edit in iOS",
+            "Fixed NaN in results and null in fields bug"
+        ]
+    ],
+    [
+        "1.3",
+        "8 February, 2013",
+        [
+            "The title is replaced by the more similar to the contents of the page",
+            "Added description for auto-save feature",
+            "Added army camps capacity — allows to show free capacity",
+            "Added maximum barracks level — allows show/hide unavailable troops",
+            "Added spells calculation"
+        ]
+    ],
+    [
+        "1.2",
+        "6 February, 2013",
+        [
+            "Added plus/minus buttons",
+            "Fixed IE 9+ support",
+            "Changed favicon to app store game icon",
+            "Added elixir icon to costs",
+            "Added intermediate results of the calculations to the troops table"
+        ]
+    ],
+    [
+        "1.1",
+        "5 February, 2013",
+        [
+            "Added sixth level for Barbarian, Archer, Giant and Balloon",
+            "Fixed Healer 1st level cost",
+            "Number of barracks field replaced by the select"
+        ]
+    ],
+    [
+        "1.0",
+        "4 February, 2013",
+        [
+            "Initial release"
+        ]
+    ]
+]

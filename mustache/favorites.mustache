@@ -1,0 +1,29 @@
+<div class="favorite js-favorite" data-num="{{index}}">
+    <textarea class="favorite__title js-favorite-title"
+              placeholder="Untitled"
+              rows="1"
+              data-num="{{index}}">{{title}}</textarea>
+    {{#types}}
+        {{#totalCapacity}}
+            <div class="favorite__capacity">{{totalCapacity}}&thinsp;/&thinsp;{{maximumCapacity}}</div>
+        {{/totalCapacity}}
+
+        <table class="favorite__objects">
+            {{#items}}
+                <tr>
+                    <td class="number">×{{quantity}}</td>
+                    <td>{{name}}</td>
+                </tr>
+            {{/items}}
+        </table>
+        <div class="favorite__time">{{& time}}</div>
+        <div class="favorite__cost">
+            <span class="icon-{{costModifier}}">{{cost}}</span>
+        </div>
+    {{/types}}
+
+    <span class="button-group">
+        <span class="button js-favorite-load" data-num="{{index}}">Load</span><!--
+        --><span class="button button_after js-favorite-delete" data-num="{{index}}">Remove</span>
+    </span>
+</div>

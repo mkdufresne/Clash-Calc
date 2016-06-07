@@ -1,0 +1,116 @@
+@media @mobile-media-query {
+    .data-wrapper {
+        margin: 0 -@mobile-page-indent;
+    }
+}
+
+.data {
+    margin-bottom: 20px;
+    -webkit-transform: translateZ(0);
+    -webkit-font-smoothing: subpixel-antialiased;
+
+    @media @mobile-media-query {
+        width: 100%;
+    }
+
+    th, td {
+        padding-right: 7px;
+        padding-bottom: 2px;
+        padding-left: 7px;
+        white-space: nowrap;
+        border-bottom: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+
+        @media @mobile-media-query {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+    th {
+        text-align: left;
+        vertical-align: top;
+
+        .font-size('small');
+    }
+    td {
+        padding-top: 2px;
+
+        > input {
+            text-align: right;
+            vertical-align: middle;
+        }
+    }
+
+    th:first-child, td:first-child {
+        padding-left: 0;
+
+        @media @mobile-media-query {
+            padding-left: @mobile-page-indent;
+        }
+    }
+
+    th:last-child, td:last-child {
+        border-right: 0;
+
+        @media @mobile-media-query {
+            padding-right: @mobile-page-indent;
+        }
+    }
+
+    tfoot tr:last-child td {
+        border-bottom: 0;
+    }
+
+    th.data__last, td.data__last {
+        padding-right: @mobile-page-indent;
+        border-right: 0;
+    }
+}
+
+    .s-touch .data {
+        -webkit-user-select: none;
+    }
+
+    .data_buildings {
+        font-size: @font-size-small;
+        margin-bottom: 0;
+
+        @media @mobile-media-query {
+            font-size: @font-size-tiny-mobile;
+
+            td:last-child {
+                padding-right: 4px;
+                padding-left: 3px;
+                white-space: nowrap;
+            }
+
+        }
+
+        td, th {
+            white-space: normal;
+        }
+
+        select {
+            margin-right: 8px;
+
+            @media @mobile-media-query {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .data__right {
+        float: right;
+        padding-top: 1px;
+    }
+
+    @media @mobile-media-query {
+        .data__object-title {
+            display: none;
+        }
+
+        .data__time {
+            font-size: @font-size-small-mobile;
+        }
+
+    }
