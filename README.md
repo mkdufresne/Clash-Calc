@@ -1,5 +1,5 @@
 # Clash-Calc
-Clash of Clans Troop Cost and Balancing Calculator
+Clash of Clans Troops and Spells Cost Calculator/Time Planner
 
 Originally developed by Mikhail Kalashnik
 
